@@ -1,4 +1,5 @@
 import knex from 'knex';
+import path from 'path';
 
 const db = knex({
   client: 'pg',
@@ -7,6 +8,9 @@ const db = knex({
     user: 'docker',
     password: process.env.DB_PASSWORD,
     database: process.env.DB,
+  },
+  migrations: {
+    directory: path.resolve(__dirname, 'migrations'),
   },
 });
 
