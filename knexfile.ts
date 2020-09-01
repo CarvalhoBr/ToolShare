@@ -1,17 +1,19 @@
 // Update with your config settings.
 import path from 'path';
 
-module.exports = {
+const configuration = {
 
   development: {
-    client: 'postgresql',
+
+    client: 'pg',
     connection: {
-      database: process.env.DB,
+      host: 'localhost',
       user: 'postgres',
-      password: process.env.DB_PASSWORD,
+      password: 'docker',
+      database: 'ToolShareDb',
     },
+
     migrations: {
-      tableName: 'knex_migrations',
       directory: path.resolve(__dirname, 'src', 'database', 'migrations'),
     },
   },
@@ -33,3 +35,5 @@ module.exports = {
   },
 
 };
+
+export default configuration;

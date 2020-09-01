@@ -5,8 +5,8 @@ dotenv.config();
 
 const server = express();
 
-server.get(('/'), (req, res) => {
-  res.send('ok');
+server.get(('/'), async (req, res) => {
+  res.json({ ok: true });
 });
 
 server.listen(3333);

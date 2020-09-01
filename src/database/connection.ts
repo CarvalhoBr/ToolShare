@@ -1,17 +1,6 @@
 import knex from 'knex';
-import path from 'path';
+import configuration from '../../knexfile';
 
-const db = knex({
-  client: 'pg',
-  connection: {
-    host: process.env.DB_HOST,
-    user: 'docker',
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB,
-  },
-  migrations: {
-    directory: path.resolve(__dirname, 'migrations'),
-  },
-});
+const db = knex(configuration.development);
 
 export default db;
