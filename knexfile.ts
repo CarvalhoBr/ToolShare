@@ -20,6 +20,7 @@ const configuration = {
     seeds: {
       directory: path.resolve(__dirname, 'src', 'database', 'seeds'),
     },
+
   },
 
   production: {
