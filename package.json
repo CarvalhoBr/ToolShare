@@ -6,7 +6,7 @@
   "author": "Brandon Carvalho <brandonsouza27@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --respawn --ignore-watch node_modules --no-notify ./src/server.ts"
+    "dev": "ts-node-dev --inspect --respawn --ignore-watch node_modules --no-notify ./src/server.ts"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
