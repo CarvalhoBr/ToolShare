@@ -1,12 +1,12 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import routes from './routes';
 
 dotenv.config();
 
 const server = express();
 
-server.get(('/'), async (req, res) => {
-  res.json({ ok: true });
-});
+server.use(express.json());
+server.use(routes);
 
 server.listen(3333);
